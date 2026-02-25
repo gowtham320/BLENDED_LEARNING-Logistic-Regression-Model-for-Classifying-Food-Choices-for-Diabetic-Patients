@@ -94,8 +94,8 @@ print(conf_matrix)
 ```
 
 ## Output:
-![simple linear regression model for predicting the marks scored](sam.png)
 Screenshot 2026-02-25 090304.png
+Screenshot 2026-02-25 090321.png
 
 
 
