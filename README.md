@@ -9,22 +9,93 @@ To implement a logistic regression model to classify food items for diabetic pat
 2. Anaconda – Python 3.7 Installation / Jupyter notebook
 
 ## Algorithm
-1. 
-2. 
-3. 
-4. 
+1.Load Data Import and prepare the dataset to initiate the analysis workflow.
+
+2.Explore Data Examine the data to understand key patterns, distributions, and feature relationships.
+
+3.Select Features Choose the most impactful features to improve model accuracy and reduce complexity.
+
+4.Split Data Partition the dataset into training and testing sets for validation purposes.
+
+5.Scale Features Normalize feature values to maintain consistent scales, ensuring stability during training.
+
+6.Train Model with Hyperparameter Tuning Fit the model to the training data while adjusting hyperparameters to enhance performance.
+
+7.Evaluate Model Assess the model’s accuracy and effectiveness on the testing set using performance metrics. 
+
 
 ## Program:
 ```
 /*
 Program to implement Logistic Regression for classifying food choices based on nutritional information.
-Developed by: 
-RegisterNumber:  
+Developed by: Gowtham
+RegisterNumber:25005013
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.preprocessing import LabelEncoder, MinMaxScaler
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+import matplotlib.pyplot as plt
+
+# Load the dataset
+df = pd.read_csv("food_items.csv")
+
+# Inspect the dataset
+print("Name: Gowtham u")
+print("Reg. No:212225040099 ")
+print("Dataset Overview:")
+print(df.head())
+print("\nDataset Info:")
+print(df.info())
+
+X_raw = df.iloc[:, :-1]
+y_raw = df.iloc[:, -1:]
+
+scaler = MinMaxScaler()
+X = scaler.fit_transform(X_raw)
+
+label_encoder = LabelEncoder()
+y = label_encoder.fit_transform(y_raw.values.ravel())
+
+# Split the dataset
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, stratify=y, random_state=123
+)
+
+# Model parameters
+penalty = 'l2'
+multi_class = 'multinomial'
+solver = 'lbfgs'
+max_iter = 1000
+
+# Define logistic regression model
+l2_model = LogisticRegression(
+    random_state=123,
+    penalty=penalty,
+    multi_class=multi_class,
+    solver=solver,
+    max_iter=max_iter
+)
+
+l2_model.fit(X_train, y_train)
+
+y_pred = l2_model.predict(X_test)
+
+# Evaluate the model
+print("\nModel Evaluation:")
+print("Accuracy:", accuracy_score(y_test, y_pred))
+print("\nClassification Report:")
+print(classification_report(y_test, y_pred))
+
+# Confusion Matrix
+conf_matrix = confusion_matrix(y_test, y_pred)
+print(conf_matrix)
 */
 ```
 
 ## Output:
 ![simple linear regression model for predicting the marks scored](sam.png)
+
 
 
 ## Result:
