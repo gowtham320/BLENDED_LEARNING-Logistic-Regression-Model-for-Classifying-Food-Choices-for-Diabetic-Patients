@@ -94,12 +94,11 @@ print(conf_matrix)
 ```
 
 ## Output:
-~~~
-Screenshot 2026-02-25 090304.png
-Screenshot 2026-02-25 090321.png
-Screenshot 2026-02-25 090339.png
-~~~
+<img width="1387" height="649" alt="Screenshot 2026-02-25 090304" src="https://github.com/user-attachments/assets/13d7de23-452c-4e7f-a7bd-6214e7c996e4" />
 
+<img width="1393" height="658" alt="Screenshot 2026-02-25 090321" src="https://github.com/user-attachments/assets/95eb59fd-e24b-4893-89f2-1e27efdfcaa3" />
+<img width="1362" height="313" alt="Screenshot 2026-02-25 090339" src="https://github.com/user-attachments/assets/a06ba675-88ac-43ac-8f06-8f9d3b9b265e" />
+<img width="752" height="723" alt="image (4)" src="https://github.com/user-attachments/assets/0c4935ff-3ffc-4ae4-a9a3-ff4dfc86cf45" />
 
 
 ## Result:
